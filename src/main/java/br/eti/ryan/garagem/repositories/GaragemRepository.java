@@ -12,8 +12,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author sesidevb
  */
-public interface VeiculoRepository extends JpaRepository<Veiculo, Long> {
+public interface GaragemRepository extends JpaRepository<Veiculo, Long> {
 
-    public List<Veiculo> findAll();
+    public Veiculo findById(long id);
+    public List<Veiculo> findByCorIgnoreCase(String cor);
+    public List<Veiculo> findByAno(String ano);
     
 }
